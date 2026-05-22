@@ -1,1 +1,387 @@
-/* Add you CSS here */
+/* ===== BODY STYLING ===== */
+/* Reset default margins and padding for cleaner layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body: Main page background and text styling */
+body {
+  /* Use a clean, readable font family */
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+  
+  /* Better line spacing makes text easier to read */
+  line-height: 1.6;
+  
+  /* Soft light background color (not pure white - easier on the eyes) */
+  background-color: #f8fafc;
+  
+  /* Dark text for good contrast and readability */
+  color: #1e293b;
+}
+
+/* ===== HEADER STYLING ===== */
+/* Header: Top section with your name and tagline */
+header {
+  /* Dark professional background */
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  
+  /* White text for good contrast */
+  color: white;
+  
+  /* Generous padding creates breathing room */
+  padding: 50px 20px;
+  
+  /* Center all text */
+  text-align: center;
+  
+  /* Subtle shadow adds depth and separates header from content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header h1: Your name (main heading) */
+header h1 {
+  /* Large, bold heading for prominence */
+  font-size: 42px;
+  font-weight: 700;
+  
+  /* Space between heading and tagline */
+  margin-bottom: 12px;
+  
+  /* Smooth letter spacing for elegance */
+  letter-spacing: 0.5px;
+}
+
+/* Header h2: Tagline or subtitle */
+header h2 {
+  /* Smaller font for secondary text */
+  font-size: 18px;
+  
+  /* Lighter shade of white for subtle contrast */
+  color: #e5e7eb;
+  
+  /* Smooth appearance */
+  font-weight: 300;
+}
+
+/* ===== BOXED SECTION STYLING ===== */
+/* Page content sections with boxed styling */
+.boxed-section {
+  /* Add a border to create a box */
+  border: 3px solid #1f2937;
+  border-radius: 12px;
+  
+  /* Padding inside the box */
+  padding: 30px;
+  
+  /* Background color */
+  background-color: white;
+  
+  /* Subtle shadow for depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  /* Margin for spacing */
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+/* Tab navigation above sections */
+.section-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px auto 0;
+  max-width: 900px;
+}
+
+.section-tab {
+  background: white;
+  border: 2px solid #1f2937;
+  border-radius: 999px;
+  color: #1f2937;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 24px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.section-tab:hover,
+.section-tab.active {
+  background: #1f2937;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Hide panels by default, show active one */
+.content-panel {
+  display: none;
+}
+
+.content-panel.active {
+  display: block;
+}
+
+/* Boxed section heading */
+.boxed-section h2 {
+  /* Large heading */
+  font-size: 28px;
+  font-weight: 700;
+  
+  /* Color to match header */
+  color: #1f2937;
+  
+  /* Space below the heading */
+  margin-bottom: 25px;
+  
+  /* Center the heading */
+  text-align: center;
+}
+
+/* ===== BIO CONTENT STYLING ===== */
+.bio-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bio-text {
+  max-width: 560px;
+  text-align: center;
+}
+
+.bio-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+.bio-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== COURSEWORK GRID STYLING ===== */
+.coursework-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.coursework-card,
+.skills-card {
+  border: 2px solid #1f2937;
+  border-radius: 14px;
+  padding: 24px;
+  background-color: #f8fafc;
+  box-shadow: 0 3px 10px rgba(31, 41, 55, 0.08);
+}
+
+.coursework-card h3,
+.skills-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #1f2937;
+  text-align: center;
+}
+
+.coursework-card ul,
+.skills-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.coursework-card li,
+.skills-card li {
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #334155;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 24px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 760px) {
+  .coursework-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== TECHNOLOGY ICON LINKS ===== */
+.tech-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.tech-link:hover {
+  color: #111827;
+}
+
+.tech-icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.tech-icon-python {
+  background: linear-gradient(135deg, #306998 45%, #ffd43b 45%);
+  position: relative;
+}
+
+.tech-icon-python::before,
+.tech-icon-python::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.tech-icon-python::before {
+  width: 10px;
+  height: 10px;
+  background: white;
+  top: 4px;
+  left: 4px;
+}
+
+.tech-icon-python::after {
+  width: 10px;
+  height: 10px;
+  background: white;
+  bottom: 4px;
+  right: 4px;
+}
+
+.tech-icon-java {
+  background: #f89820;
+  position: relative;
+}
+
+.tech-icon-java::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  border: 3px solid white;
+  border-bottom: none;
+  top: 4px;
+  left: 5px;
+  border-radius: 50% 50% 0 0;
+}
+
+.tech-icon-java::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background: white;
+  border-radius: 0 0 3px 3px;
+  bottom: 4px;
+  left: 5px;
+}
+
+.tech-icon-sql {
+  background: #00758f;
+  position: relative;
+}
+
+.tech-icon-sql::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  border: 2px solid white;
+  border-radius: 3px;
+  top: 4px;
+  left: 3px;
+}
+
+.tech-icon-sql::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 6px;
+  background: white;
+  bottom: 4px;
+  left: 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+.tech-icon-mongodb {
+  background: #47a248;
+  position: relative;
+}
+
+.tech-icon-mongodb::before,
+.tech-icon-mongodb::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+}
+
+.tech-icon-mongodb::before {
+  width: 14px;
+  height: 14px;
+  top: 3px;
+  left: 4px;
+}
+
+.tech-icon-mongodb::after {
+  width: 12px;
+  height: 12px;
+  bottom: 4px;
+  right: 4px;
+}
+/* ===== PROFILE PICTURE STYLING ===== */
+/* Profile picture container: Creates space for the circular image */
+.profile-picture {
+  /* Larger circular dimensions */
+  width: 300px;
+  height: 300px;
+  
+  /* Makes the container circular */
+  border-radius: 50%;
+  
+  /* Centers content inside the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Subtle background in case image doesn't load */
+  background-color: #e0e7ff;
+  
+  /* Adds a subtle shadow for depth */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Makes it overflow hidden so image stays circular */
+  overflow: hidden;
+  
+  /* Center the profile picture on the page */
+  margin: 30px auto 20px auto;
+}
+
+/* Profile picture image: The actual photo */
+.profile-picture img {
+  /* Image fills the entire container */
+  width: 100%;
+  height: 100%;
+  
+  /* Fills space while maintaining aspect ratio */
+  object-fit: cover;
+}
